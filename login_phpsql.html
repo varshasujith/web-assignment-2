@@ -1,0 +1,59 @@
+<html>  
+<head>  
+    <title>PHP login system</title>  
+   <!--insert style.css file inside index.html --> 
+     
+    <link rel = "stylesheet" type = "text/css" href = "css/style1.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>Login</h1>  
+        <form name="f1" action = "CRED.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label> Name: </label>  
+                <input type = "text" id ="name" name  = "name" />
+            </p>  
+            <p>  
+                <label> Phone number: </label>  
+                <input type = "number" id ="number" name  = "number" />  
+            </p>  
+            <p>     
+                <input type="submit" id="btn-insert" name="action" value="Insert" />
+            </p>
+            <p>
+                <input type="submit" id="btn-update" name="action" value="Update" />
+            </p>
+            <p>
+                <input type="submit" id="btn-delete" name="action" value="Delete" /> 
+            </p> 
+            <p>     
+                <input type="submit" id="btn-show" name="action" value="Show" />
+            </p> 
+        </form>  
+    </div>  
+
+
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.name.value;  
+                var ps=document.f1.number.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("Name and Number fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Number field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>  
+</body>     
+</html>
